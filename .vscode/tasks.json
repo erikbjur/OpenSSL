@@ -25,6 +25,26 @@
       "group": "build",
       "problemMatcher": [],
       "detail": "Cleans OpenSSL build and output directory for macOS."
+    },
+    {
+      "label": "Build OpenSSL Static (Windows)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\scripts\\build_windows_openssl.bat",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Clean OpenSSL Static (Windows)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\scripts\\clean_windows_openssl.bat",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
     }
   ]
 }
