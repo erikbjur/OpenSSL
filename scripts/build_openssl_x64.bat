@@ -24,6 +24,8 @@ cd ..\External\OpenSSL_Static_Library\openssl
 REM Clean previous builds (optional)
 perl Configure clean
 
+set OPENSSL_NO_INSTALL_PATHS=1
+
 REM Configure and build OpenSSL for x64
 perl Configure VC-WIN64A no-shared --prefix="%BUILD_INSTALL_PATH%"
 nmake
