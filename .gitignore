@@ -1,0 +1,11 @@
+#Ignore the cmake cache folder
+*.cache
+
+#Ignore the cmake build folder
+*build
+
+#Ignore the macos build files
+*External/OpenSSL_Static_Library/build-macos
+
+#Ignore the windows build files
+*External/OpenSSL_Static_Library/build-windows

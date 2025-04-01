@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build OpenSSL (macOS static)",
+      "type": "shell",
+      "command": "./Configure darwin64-arm64-cc no-shared no-dso --prefix=$(pwd)/../build-macos && make -j$(sysctl -n hw.ncpu) && make install",
+      "options": {
+        "cwd": "${workspaceFolder}/External/OpenSSL_Static_Library/openssl"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": [],
+      "detail": "Builds OpenSSL as a static library for macOS."
+    },
+    {
+      "label": "Clean OpenSSL (macOS)",
+      "type": "shell",
+      "command": "make clean && rm -rf ../build-macos",
+      "options": {
+        "cwd": "${workspaceFolder}/External/OpenSSL_Static_Library/openssl"
+      },
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Cleans OpenSSL build and output directory for macOS."
+    }
+  ]
+}
