@@ -48,5 +48,13 @@ target_link_libraries(myapp
         OpenSSL::Crypto
 )
 
+if(WIN32)
+    target_link_libraries(myapp
+    PRIVATE
+        ws2_32
+        crypt32
+    )
+endif()
+
 # Define OPENSSL_STATIC (optional but useful)
 target_compile_definitions(myapp PRIVATE OPENSSL_STATIC)

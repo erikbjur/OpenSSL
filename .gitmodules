@@ -1,3 +1,4 @@
 [submodule "External/OpenSSL_Static_Library/openssl"]
 	path = External/OpenSSL_Static_Library/openssl
 	url = https://github.com/openssl/openssl
+	ignore = all
