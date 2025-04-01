@@ -27,9 +27,9 @@
       "detail": "Cleans OpenSSL build and output directory for macOS."
     },
     {
-      "label": "Build OpenSSL Static (Windows)",
+      "label": "Build OpenSSL Static (Windows x64)",
       "type": "shell",
-      "command": "${workspaceFolder}\\scripts\\build_windows_openssl.bat",
+      "command": "${workspaceFolder}\\scripts\\build_openssl_x64.bat",
       "problemMatcher": [],
       "group": {
         "kind": "build",
@@ -37,9 +37,29 @@
       }
     },
     {
-      "label": "Clean OpenSSL Static (Windows)",
+      "label": "Clean OpenSSL Static (Windows x64)",
       "type": "shell",
-      "command": "${workspaceFolder}\\scripts\\clean_windows_openssl.bat",
+      "command": "${workspaceFolder}\\scripts\\clean_openssl_x64.bat",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Build OpenSSL Static (Windows arm64)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\scripts\\build_openssl_arm64.bat",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "Clean OpenSSL Static (Windows arm64)",
+      "type": "shell",
+      "command": "${workspaceFolder}\\scripts\\clean_openssl_arm64.bat",
       "problemMatcher": [],
       "group": {
         "kind": "build",
