@@ -27,7 +27,11 @@ perl Configure clean
 set OPENSSL_NO_INSTALL_PATHS=1
 
 REM Configure and build OpenSSL for x64
-perl Configure VC-WIN64A no-shared --prefix="%BUILD_INSTALL_PATH%"
+perl Configure VC-WIN64A no-shared no-tests ^
+no-rc2 no-rc4 no-rc5 no-idea no-md2 no-md4 no-mdc2 no-camellia ^
+no-seed no-bf no-cast no-sm2 no-srp no-gost no-engine no-deprecated ^
+--prefix="%BUILD_INSTALL_PATH%"
+
 nmake
 nmake install
 
