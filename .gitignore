@@ -9,3 +9,6 @@
 
 #Ignore the windows build files
 *External/OpenSSL_Static_Library/build-windows
+
+#Ignore any of the files inside of the openssl repo
+*External\OpenSSL_Static_Library\openssl
